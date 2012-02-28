@@ -1,0 +1,38 @@
+#################################################
+# オプション
+#################################################
+# 現在のウィンドウに対して可視ベルの設定します。
+vbell off
+# ハングアップしたときにscreenは自動的にデタッチ
+autodetach on
+# 起動時に著作権表示
+startup_message off
+# スクロールバックバッファの大きさ
+defscrollback 1000
+# 画面の一番下の行を反転させてハードステータス表示
+hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
+# エスケープは<C-z>
+escape ^z^z
+# 背景色消去
+defbce "on"
+# シェルタイトル
+shelltitle '% |zsh'
+# ターミナル
+term xterm-256color
+
+#################################################
+# キーバインド
+#################################################
+# <C-s> 新規ウィンドウでssh開始
+bind s colon 'screen ssh '
+# <C-k> kill 現在のウィンドウ破棄
+bind k
+bind ^k
+# <C-.> dumptermcap抑制
+bind .
+# <C-\> 全ウィンドウ破棄
+bind ^\
+bind \\
+# <C-h> ハードコピー書込み
+bind ^h
+bind h
