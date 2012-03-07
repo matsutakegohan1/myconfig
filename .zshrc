@@ -1,8 +1,15 @@
 # 文字コードの設定
 export LANG=ja_JP.UTF-8
 
+# ライブラリたち
+export CPPFLAGS="-I$HOME/local/include"
+export LDFLAGS="-L$HOME/local/lib"
+
+# TERM
+export TERM=xterm-256color
+
 # パスの設定
-PATH=/usr/share/bin:/Users/matsutakegohan1/pear/bin:/usr/local/mysql/bin:/usr/local/bin:/opt/local/bin:$PATH
+PATH=~/local/bin:/usr/share/bin:/Users/matsutakegohan1/pear/bin:/usr/local/mysql/bin:/usr/local/bin:/opt/local/bin:$PATH
 export MANPATH=/usr/local/man:/usr/share/man
 
 # 関数
@@ -101,7 +108,8 @@ setopt auto_cd
 # C-s, C-qを無効にする。
 setopt NO_flow_control
 
-alias ls="ls -aF"
+alias ls="ls -aF --color=auto"
+alias zsh="~/local/bin/zsh"
 
 # ${fg[...]} や $reset_color をロード
 autoload -U colors; colors
