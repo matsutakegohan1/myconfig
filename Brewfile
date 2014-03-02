@@ -85,6 +85,5 @@ cask install wireshark || true
 cask install genymotion || true
 cask install opera|| true
 cask install skype|| true
-cask install echofon
 
 cleanup
