@@ -108,8 +108,7 @@ setopt auto_cd
 # C-s, C-qを無効にする。
 setopt NO_flow_control
 
-alias ls="ls -aF --color=auto"
-alias zsh="~/local/bin/zsh"
+alias ls="ls -aF"
 
 # ${fg[...]} や $reset_color をロード
 autoload -U colors; colors
@@ -144,3 +143,5 @@ function rprompt-git-current-branch {
 setopt prompt_subst
 
 RPROMPT='[`rprompt-git-current-branch`%~]'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
